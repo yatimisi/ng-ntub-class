@@ -1,0 +1,10 @@
+<h1>listen03</h1>
+
+<ul>
+  <li
+    *ngFor="let number of numbers; let i = index;"
+    [ngStyle]="{'color': (i < 5? 'red': 'green')}"
+  >
+    {{(i + 1) * 10}}分
+  </li>
+</ul>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Account } from './models/account.model';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demo01';
+  age = 10;
+  acc: Account = {
+    account: 'user01',
+    password: 'pwd',
+  };
+
+  sayHi() {
+    alert(this.age);
+  }
 }

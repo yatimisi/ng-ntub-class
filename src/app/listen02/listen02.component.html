@@ -1,0 +1,10 @@
+<h1>listen02</h1>
+
+<input type="number" [(ngModel)]="number">
+
+<p>{{ (number >= 60? '好棒': '好笨') }}</p>
+
+<p *ngIf="number >= 60; else elseTmpl">好棒</p>
+<ng-template #elseTmpl>
+  <p>好笨</p>
+</ng-template>
