@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-listen01',
@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class Listen01Component implements OnInit {
 
   money = 0;
+  @Output() twMoneyChange: EventEmitter<number> = new EventEmitter<number>();
 
   constructor() { }
 

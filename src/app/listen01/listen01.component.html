@@ -1,5 +1,5 @@
 <h1>listen01</h1>
 
-<div>tw$<input type="number" [(ngModel)]="money"></div>
+<div>tw$<input type="number" [(ngModel)]="money" (ngModelChange)="twMoneyChange.emit($event)"></div>
 <div>us$:{{ money * 30 }}</div>
 <div>jp$:{{ money / 5 }}</div>

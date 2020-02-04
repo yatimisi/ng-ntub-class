@@ -12,16 +12,18 @@ import { Listen03Component } from './listen03/listen03.component';
 import { Listen04Component } from './listen04/listen04.component';
 import { Listen05Component } from './listen05/listen05.component';
 import { StartComponent } from './start/start.component';
+import { Listen06Component } from './listen06/listen06.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    StartComponent,
     Listen01Component,
     Listen02Component,
     Listen03Component,
     Listen04Component,
     Listen05Component,
-    StartComponent,
+    Listen06Component,
   ],
   imports: [
     BrowserModule,

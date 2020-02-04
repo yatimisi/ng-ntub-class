@@ -15,7 +15,7 @@ export class AppComponent {
     password: 'pwd',
   };
 
-  sayHi() {
-    alert(this.age);
+  sayHi(word: string = 'Hi') {
+    alert(word);
   }
 }

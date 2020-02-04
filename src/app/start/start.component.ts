@@ -16,6 +16,6 @@ export class StartComponent implements OnInit {
   }
 
   buttonClick() {
-    this.bClick.emit('buttonClick');
+    this.bClick.emit('哈瞜');
   }
 }
