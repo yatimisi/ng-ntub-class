@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 import { NgPipesModule } from 'ngx-pipes';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,7 @@ import { Listen04Component } from './listen04/listen04.component';
 import { Listen05Component } from './listen05/listen05.component';
 import { StartComponent } from './start/start.component';
 import { Listen06Component } from './listen06/listen06.component';
+import { Listen08Component } from './listen08/listen08.component';
 
 @NgModule({
   declarations: [
@@ -24,12 +25,14 @@ import { Listen06Component } from './listen06/listen06.component';
     Listen04Component,
     Listen05Component,
     Listen06Component,
+    Listen08Component,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     NgPipesModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

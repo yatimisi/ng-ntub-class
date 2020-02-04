@@ -6,6 +6,7 @@ import { Listen03Component } from './listen03/listen03.component';
 import { Listen04Component } from './listen04/listen04.component';
 import { Listen05Component } from './listen05/listen05.component';
 import { Listen06Component } from './listen06/listen06.component';
+import { Listen08Component } from './listen08/listen08.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'lon4', component: Listen04Component },
   { path: 'lon5', component: Listen05Component },
   { path: 'lon6', component: Listen06Component },
+  { path: 'lon8', component: Listen08Component },
   { path: '**', component: Listen01Component },
 ];
 
