@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 
 @Component({
@@ -8,10 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class StartComponent implements OnInit {
   @Input() buttonTitle: string;
+  @Output() bClick: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  buttonClick() {
+    this.bClick.emit('buttonClick');
+  }
 }
