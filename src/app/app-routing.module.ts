@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'lon4', component: Listen04Component },
   { path: 'lon5', component: Listen05Component },
   { path: 'lon6', component: Listen06Component },
+  { path: '**', component: Listen01Component },
 ];
 
 @NgModule({
