@@ -5,5 +5,11 @@ import { Injectable } from '@angular/core';
 })
 export class BmiService {
 
+  name: string;
+
   constructor() { }
+
+  sayHello() {
+    alert('Hello');
+  }
 }
