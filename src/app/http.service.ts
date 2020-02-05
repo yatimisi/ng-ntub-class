@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
+import { environment } from '../environments/environment';
 
 
 @Injectable({
@@ -8,13 +8,11 @@ import { environment } from 'src/environments/environment';
 })
 export class HttpService {
 
-  API = environment.serverIP;
-
   constructor(
     private httpClient: HttpClient,
   ) { }
 
   getData() {
-    return this.httpClient.get(`${this.API}/books`);
+    return this.httpClient.get(`${environment.serverIP}/books`);
   }
 }

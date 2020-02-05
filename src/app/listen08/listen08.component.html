@@ -1,4 +1,15 @@
 <h1>listen08</h1>
 
-<div>{{books|json}}</div>
-<div>{{book|json}}</div>
+<pre>{{books|json}}</pre>
+
+<hr>
+
+<div *ngFor="let book of books">
+  <p>{{book.id}}</p>
+  <p>{{book.name}}</p>
+  <p>{{book.price}}</p>
+</div>
+
+<hr>
+
+<pre>{{book|json}}</pre>
