@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from '../../services/book.service';
 import { Book } from '../../models/book.model';
+import { collectExternalReferences } from '@angular/compiler';
 
 
 @Component({
@@ -13,9 +14,9 @@ export class Listen08Component implements OnInit {
   books: Book[];
   book: Book;
   postBook: Book = {
-    name: '',
-    price: 0,
-    description: '',
+    name: 'OwO',
+    price: 2147483647,
+    description: 'QwQ',
     is_online: true,
   };
 
@@ -43,4 +44,9 @@ export class Listen08Component implements OnInit {
     );
   }
 
+  createBook() {
+    this.bookService.postBook(this.postBook).subscribe(
+      () => console.log('Finish')
+    );
+  }
 }

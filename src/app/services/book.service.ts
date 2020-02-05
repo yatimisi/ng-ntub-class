@@ -20,4 +20,8 @@ export class BookService {
   getBook(id: number): Observable<Book> {
     return this.http.get<Book>(`${environment.serverIP}/books/${id}`);
   }
+
+  postBook(book: Book): Observable<Book> {
+    return this.http.post<Book>(`${environment.serverIP}/books`, book);
+  }
 }

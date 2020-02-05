@@ -1,6 +1,6 @@
 <h1>listen08</h1>
 
-<!-- <pre>{{books|json}}</pre>
+<pre>{{books|json}}</pre>
 
 <hr>
 
@@ -12,14 +12,18 @@
 
 <hr>
 
-<pre>{{book|json}}</pre> -->
+<pre>{{book|json}}</pre>
 
-<input type="text">
+<input type="text" [(ngModel)]="postBook.name">
 <br>
-<input type="text">
+<input type="number" [(ngModel)]="postBook.price">
 <br>
-<input type="text">
+<input type="text" [(ngModel)]="postBook.description">
 <br>
-<input type="text">
+<input
+  type="checkbox"
+  [(ngModel)]="postBook.is_online"/>
 <br>
-<button>送出</button>
+<button (click)="createBook()">送出</button>
+
+{{postBook|json}}
