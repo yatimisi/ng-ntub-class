@@ -12,6 +12,12 @@ export class Listen08Component implements OnInit {
 
   books: Book[];
   book: Book;
+  postBook: Book = {
+    name: '',
+    price: 0,
+    description: '',
+    is_online: true,
+  };
 
   constructor(
     private bookService: BookService
