@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpService } from '../http.service';
 import { BookService } from '../book.service';
+import { Book } from '../models/book.model';
 
 
 @Component({
@@ -10,23 +10,14 @@ import { BookService } from '../book.service';
 })
 export class Listen08Component implements OnInit {
 
-  books: any;
+  books: Book[];
+  book: Book;
 
   constructor(
-    private httpService: HttpService,
     private bookService: BookService
   ) { }
 
   ngOnInit() {
-    this.httpService.getData().subscribe(
-      data => {
-        console.log(data);
-        this.books = data;
-      },
-      error => console.log(error),
-      () => console.log('finish')
-    );
-
     this.bookService.getBooks().subscribe(
       data => {
         console.log(data);
@@ -39,7 +30,7 @@ export class Listen08Component implements OnInit {
     this.bookService.getBook(1).subscribe(
       data => {
         console.log(data);
-        this.books = data;
+        this.book = data;
       },
       error => console.log(error),
       () => console.log('finish')
