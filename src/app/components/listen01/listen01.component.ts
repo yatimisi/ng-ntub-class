@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { BmiService } from '../bmi.service';
+import { BmiService } from '../../services/bmi.service';
 
 
 @Component({
