@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from '../../services/book.service';
 import { Book } from '../../models/book.model';
-import { collectExternalReferences } from '@angular/compiler';
 
 
 @Component({
@@ -19,6 +18,8 @@ export class Listen08Component implements OnInit {
     description: 'QwQ',
     is_online: true,
   };
+  putBook: Book;
+  patchBook: Book;
 
   constructor(
     private bookService: BookService
@@ -38,15 +39,23 @@ export class Listen08Component implements OnInit {
       data => {
         console.log(data);
         this.book = data;
+        this.putBook = data;
+        this.patchBook = data;
       },
       error => console.log(error),
       () => console.log('finish')
     );
   }
 
-  createBook() {
-    this.bookService.postBook(this.postBook).subscribe(
-      () => console.log('Finish')
-    );
+  create() {
+    this.bookService.postBook(this.postBook).subscribe(console.log);
+  }
+
+  put() {
+    this.bookService.putBook(this.putBook.id, this.putBook).subscribe(console.log);
+  }
+
+  patch() {
+    this.bookService.patchBook(this.patchBook.id, this.patchBook).subscribe(console.log);
   }
 }

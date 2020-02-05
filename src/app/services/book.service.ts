@@ -24,4 +24,12 @@ export class BookService {
   postBook(book: Book): Observable<Book> {
     return this.http.post<Book>(`${environment.serverIP}/books`, book);
   }
+
+  putBook(id: number, book: Book): Observable<Book> {
+    return this.http.put<Book>(`${environment.serverIP}/books/${id}`, book);
+  }
+
+  patchBook(id: number, book: Book): Observable<Book> {
+    return this.http.patch<Book>(`${environment.serverIP}/books/${id}`, book);
+  }
 }

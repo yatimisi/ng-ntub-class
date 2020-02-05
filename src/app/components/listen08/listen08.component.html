@@ -14,6 +14,8 @@
 
 <pre>{{book|json}}</pre>
 
+<hr>
+
 <input type="text" [(ngModel)]="postBook.name">
 <br>
 <input type="number" [(ngModel)]="postBook.price">
@@ -21,9 +23,46 @@
 <input type="text" [(ngModel)]="postBook.description">
 <br>
 <input
-  type="checkbox"
-  [(ngModel)]="postBook.is_online"/>
+ type="checkbox"
+ [(ngModel)]="postBook.is_online"/>
 <br>
-<button (click)="createBook()">送出</button>
+<button (click)="create()">送出</button>
 
 {{postBook|json}}
+
+<hr>
+
+<ng-container *ngIf="putBook">
+  <input type="text" [(ngModel)]="putBook.name">
+  <br>
+  <input type="number" [(ngModel)]="putBook.price">
+  <br>
+  <input type="text" [(ngModel)]="putBook.description">
+  <br>
+  <input
+   type="checkbox"
+   [(ngModel)]="putBook.is_online"/>
+  <br>
+  <button (click)="put()">送出</button>
+
+  {{putBook|json}}
+</ng-container>
+
+
+<hr>
+
+<ng-container *ngIf="patchBook">
+  <input type="text" [(ngModel)]="patchBook.name">
+  <br>
+  <input type="number" [(ngModel)]="patchBook.price">
+  <br>
+  <input type="text" [(ngModel)]="patchBook.description">
+  <br>
+  <input
+   type="checkbox"
+   [(ngModel)]="patchBook.is_online"/>
+  <br>
+  <button (click)="patch()">送出</button>
+
+  {{patchBook|json}}
+</ng-container>
